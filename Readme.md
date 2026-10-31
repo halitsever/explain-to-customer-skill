@@ -63,10 +63,10 @@ Every style is checked for WCAG AA contrast before rendering, and uses open font
 
 Requirements: [Claude Code](https://github.com/anthropics/claude-code), Node.js 22 or newer (older versions fall back to a slower video engine), FFmpeg and git. The GitHub CLI is optional, for `PR#123` scopes.
 
-Install it with the [skills](https://github.com/vercel-labs/skills) CLI, the installer behind [skills.sh](https://skills.sh):
+Install it with the [skills](https://github.com/vercel-labs/skills) CLI (the skill is listed on [skills.sh](https://www.skills.sh/halitsever/explain-to-customer/explain-to-customer)):
 
 ```bash
-npx skills add halitsever/explain-to-customer-skill -g -a claude-code
+npx skills add halitsever/explain-to-customer -g -a claude-code
 ```
 
 `-g` installs it for your user, so it works in every project; leave it out to install into the current project only. `-a claude-code` skips the agent picker. Update with `npx skills update explain-to-customer -g`, remove with `npx skills remove explain-to-customer -g`.
@@ -76,12 +76,12 @@ npx skills add halitsever/explain-to-customer-skill -g -a claude-code
 
 ```bash
 # macOS / Linux
-git clone https://github.com/halitsever/explain-to-customer-skill ~/explain-to-customer-skill
-ln -s ~/explain-to-customer-skill/skills/explain-to-customer ~/.claude/skills/explain-to-customer
+git clone https://github.com/halitsever/explain-to-customer ~/explain-to-customer
+ln -s ~/explain-to-customer/skills/explain-to-customer ~/.claude/skills/explain-to-customer
 
 # Windows (PowerShell)
-git clone https://github.com/halitsever/explain-to-customer-skill "$env:USERPROFILE\explain-to-customer-skill"
-Copy-Item -Recurse "$env:USERPROFILE\explain-to-customer-skill\skills\explain-to-customer" "$env:USERPROFILE\.claude\skills\"
+git clone https://github.com/halitsever/explain-to-customer "$env:USERPROFILE\explain-to-customer"
+Copy-Item -Recurse "$env:USERPROFILE\explain-to-customer\skills\explain-to-customer" "$env:USERPROFILE\.claude\skills\"
 ```
 
 Update with `git pull` in the clone (on Windows, copy the folder again).
@@ -156,11 +156,11 @@ npx prettier --write "scripts/**/*.mjs" "templates/scenes/*.{js,css}" "styles/*.
 Third-party tools are installed into the tool workspace, not bundled: HyperFrames and Playwright (Apache-2.0), mermaid-cli, culori and rough.js (MIT), GSAP (standard no-charge license), fonts from Fontsource and Selawik (SIL OFL). Remotion is not used because of its company licence. Style names only describe what inspired them; no logos, trademarks or proprietary fonts are included.
 
 <p align="center">
-<a href="https://github.com/halitsever/explain-to-customer-skill/issues"><img src="https://halitsever-api.vercel.app/api/issue"/></a>
+<a href="https://github.com/halitsever/explain-to-customer/issues"><img src="https://halitsever-api.vercel.app/api/issue"/></a>
 </p>
 
 <p align="center">
-Found a bug or have an idea? Open an <a href="https://github.com/halitsever/explain-to-customer-skill/issues">issue</a>.<br/>
+Found a bug or have an idea? Open an <a href="https://github.com/halitsever/explain-to-customer/issues">issue</a>.<br/>
 Read the <a href=".github/CONTRIBUTING.md">contributing guide</a> before sending a pull request.
 </p>
 
