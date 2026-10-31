@@ -1,0 +1,63 @@
+{
+  "id": "terminal",
+  "name": "Retro terminal",
+  "family": "Bold & creative",
+  "defaultMode": "dark",
+  "description": "Retro CRT: phosphor green monospace, typewriter text, scanlines. For technical audiences.",
+  "bestFor": "CLI tools, APIs, developer audiences (use audience=technical).",
+  "colors": {
+    "background": "#0C0C0C",
+    "surface": "#101410",
+    "foreground": "#33FF66",
+    "muted": "#132016",
+    "mutedForeground": "#22B04A",
+    "border": "#1F5F30",
+    "primary": "#33FF66",
+    "primaryForeground": "#0C0C0C",
+    "accent": "#FFB000",
+    "success": "#33FF66",
+    "warning": "#FFB000",
+    "danger": "#FF5555"
+  },
+  "fonts": {
+    "heading": "JetBrains Mono",
+    "body": "JetBrains Mono",
+    "mono": "JetBrains Mono",
+    "packages": ["@fontsource/jetbrains-mono"]
+  },
+  "typography": {
+    "headingWeight": 700,
+    "headingTracking": "0em",
+    "scale": 0.95
+  },
+  "radius": "2px",
+  "borderWidth": "2px",
+  "shadow": "none",
+  "effects": ["scanlines", "crt-glow"],
+  "motion": {
+    "durationMs": 900,
+    "easing": "linear",
+    "entrance": "typewriter",
+    "stagger": 0.2
+  },
+  "mermaid": {
+    "look": "classic",
+    "themeVariables": {}
+  },
+  "variants": {
+    "amber": {
+      "description": "Amber phosphor",
+      "colors": {
+        "foreground": "#FFB000",
+        "mutedForeground": "#C98A00",
+        "border": "#6B4A00",
+        "primary": "#FFB000",
+        "accent": "#33FF66",
+        "muted": "#1E1708",
+        "surface": "#14110A"
+      }
+    }
+  },
+  "signature": ["Phosphor green on near-black (amber variant available)", "JetBrains Mono everywhere", "Scanlines and soft glow", "Typewriter text reveal"],
+  "avoid": ["Non-technical audiences", "Rounded friendly shapes", "Photographic imagery"]
+}

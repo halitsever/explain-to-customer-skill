@@ -1,0 +1,66 @@
+{
+  "id": "executive",
+  "name": "Executive",
+  "family": "Extended",
+  "defaultMode": "light",
+  "description": "Boardroom and consulting look for non-technical decision makers.",
+  "bestFor": "Executives, investors, steering committees, monthly client reports.",
+  "colors": {
+    "background": "#FFFFFF",
+    "surface": "#F5F7FA",
+    "foreground": "#0B1F3A",
+    "muted": "#EEF2F7",
+    "mutedForeground": "#4A5A70",
+    "border": "#D5DCE5",
+    "primary": "#0B1F3A",
+    "primaryForeground": "#FFFFFF",
+    "accent": "#00A3A1",
+    "success": "#0F7B5F",
+    "warning": "#9A6B00",
+    "danger": "#B42318"
+  },
+  "darkColors": {
+    "background": "#0B1F3A",
+    "surface": "#12294A",
+    "foreground": "#FFFFFF",
+    "muted": "#163257",
+    "mutedForeground": "#B7C3D4",
+    "border": "#23406A",
+    "primary": "#FFFFFF",
+    "primaryForeground": "#0B1F3A",
+    "accent": "#00A3A1"
+  },
+  "fonts": {
+    "heading": "Source Serif 4",
+    "body": "Inter",
+    "mono": "JetBrains Mono",
+    "packages": ["@fontsource/source-serif-4", "@fontsource/inter", "@fontsource/jetbrains-mono"]
+  },
+  "typography": {
+    "headingWeight": 600,
+    "headingTracking": "-0.015em"
+  },
+  "radius": "4px",
+  "borderWidth": "1px",
+  "shadow": "0 1px 2px rgba(11,31,58,0.06), 0 8px 24px rgba(11,31,58,0.06)",
+  "effects": ["accent-rule"],
+  "motion": {
+    "durationMs": 700,
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "entrance": "fade"
+  },
+  "mermaid": {
+    "look": "classic",
+    "themeVariables": {}
+  },
+  "variants": {
+    "gold": {
+      "description": "Gold accent instead of teal",
+      "colors": {
+        "accent": "#C9A227"
+      }
+    }
+  },
+  "signature": ["Navy #0B1F3A and white", "Teal (or gold variant) accent rule under titles", "Source Serif 4 headings with Inter body", "Quiet, measured fades"],
+  "avoid": ["Playful colours", "Slang or jargon", "Busy animation"]
+}

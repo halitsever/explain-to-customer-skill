@@ -1,0 +1,49 @@
+{
+  "id": "notion",
+  "name": "Notion",
+  "family": "Clean & friendly",
+  "defaultMode": "light",
+  "description": "Warm document look with serif headings, tinted callout boxes and toggle lists.",
+  "bestFor": "Process changes, documentation, internal tools, content-heavy explanations.",
+  "inspiredBy": "Notion documents",
+  "colors": {
+    "background": "#FFFFFF",
+    "surface": "#F7F6F3",
+    "foreground": "#37352F",
+    "muted": "#F1F1EF",
+    "mutedForeground": "#787774",
+    "border": "#E9E9E7",
+    "primary": "#37352F",
+    "primaryForeground": "#FFFFFF",
+    "accent": "#2383E2",
+    "success": "#448361",
+    "warning": "#CB912F",
+    "danger": "#D44C47"
+  },
+  "palette": ["#FBF3DB", "#E7F3F8", "#EDF3EC", "#FDEBEC", "#F4F0F7"],
+  "fonts": {
+    "heading": "Source Serif 4",
+    "body": "Inter",
+    "mono": "JetBrains Mono",
+    "packages": ["@fontsource/source-serif-4", "@fontsource/inter", "@fontsource/jetbrains-mono"]
+  },
+  "typography": {
+    "headingWeight": 700,
+    "headingTracking": "-0.01em"
+  },
+  "radius": "6px",
+  "borderWidth": "1px",
+  "shadow": "none",
+  "effects": ["callouts", "toggle-list"],
+  "motion": {
+    "durationMs": 450,
+    "easing": "cubic-bezier(0.2, 0, 0, 1)",
+    "entrance": "fade-up"
+  },
+  "mermaid": {
+    "look": "classic",
+    "themeVariables": {}
+  },
+  "signature": ["Serif headings over clean sans body text", "Soft tinted callout blocks", "Toggle-list triangles", "Warm off-black text"],
+  "avoid": ["Dark backgrounds", "Glows and gradients", "Heavy shadows"]
+}

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1920, height=1080">
+<title>{{title}}</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="lib/base.css">
+<link rel="stylesheet" href="tokens.css">
+<style>.clip { position: absolute; inset: 0; }</style>
+<script src="lib/gsap.min.js"></script>
+<script src="lib/CustomEase.min.js"></script>
+</head>
+<body>
+<div id="root" class="stage" data-composition-id="main" data-start="0" data-duration="{{total}}" data-width="1920" data-height="1080" data-fps="30">
+{{clips}}
+</div>
+<script src="lib/anim.js"></script>
+<script>ETC.build({{spec}});</script>
+</body>
+</html>

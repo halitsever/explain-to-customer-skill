@@ -1,0 +1,48 @@
+{
+  "id": "swiss",
+  "name": "Swiss editorial",
+  "family": "Extended",
+  "defaultMode": "light",
+  "description": "Swiss/editorial grid with huge numerals, red rules and asymmetric layouts.",
+  "bestFor": "Design-conscious clients, agencies, editorial and brand products.",
+  "colors": {
+    "background": "#FFFFFF",
+    "surface": "#F2F2F2",
+    "foreground": "#111111",
+    "muted": "#EDEDED",
+    "mutedForeground": "#555555",
+    "border": "#111111",
+    "primary": "#E30613",
+    "primaryForeground": "#FFFFFF",
+    "accent": "#E30613",
+    "success": "#00813E",
+    "warning": "#A35F00",
+    "danger": "#E30613"
+  },
+  "fonts": {
+    "heading": "Inter Tight",
+    "body": "Inter Tight",
+    "mono": "JetBrains Mono",
+    "packages": ["@fontsource/inter-tight", "@fontsource/jetbrains-mono"]
+  },
+  "typography": {
+    "headingWeight": 800,
+    "headingTracking": "-0.045em",
+    "scale": 1.1
+  },
+  "radius": "0px",
+  "borderWidth": "2px",
+  "shadow": "none",
+  "effects": ["huge-numerals", "ruled", "square"],
+  "motion": {
+    "durationMs": 550,
+    "easing": "cubic-bezier(0.77, 0, 0.175, 1)",
+    "entrance": "wipe"
+  },
+  "mermaid": {
+    "look": "classic",
+    "themeVariables": {}
+  },
+  "signature": ["Huge numerals for steps", "Red #E30613 rules and accents", "Inter Tight extra-bold, tight tracking", "Left-aligned asymmetric grid"],
+  "avoid": ["Centred symmetric layouts", "Rounded corners", "Soft shadows"]
+}

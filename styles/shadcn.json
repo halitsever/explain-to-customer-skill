@@ -1,0 +1,64 @@
+{
+  "id": "shadcn",
+  "name": "shadcn/ui",
+  "family": "Modern SaaS",
+  "defaultMode": "light",
+  "description": "Neutral zinc palette, 1px borders, soft white cards. Calm and product-like.",
+  "bestFor": "Web apps and dashboards, especially projects already built with shadcn/ui or Tailwind.",
+  "inspiredBy": "shadcn/ui",
+  "colors": {
+    "background": "#FFFFFF",
+    "surface": "#FFFFFF",
+    "foreground": "#09090B",
+    "muted": "#F4F4F5",
+    "mutedForeground": "#71717A",
+    "border": "#E4E4E7",
+    "primary": "#18181B",
+    "primaryForeground": "#FAFAFA",
+    "accent": "#2563EB",
+    "success": "#16A34A",
+    "warning": "#D97706",
+    "danger": "#DC2626"
+  },
+  "darkColors": {
+    "background": "#09090B",
+    "surface": "#18181B",
+    "foreground": "#FAFAFA",
+    "muted": "#27272A",
+    "mutedForeground": "#A1A1AA",
+    "border": "#27272A",
+    "primary": "#FAFAFA",
+    "primaryForeground": "#18181B",
+    "accent": "#3B82F6"
+  },
+  "fonts": {
+    "heading": "Geist",
+    "body": "Geist",
+    "mono": "Geist Mono",
+    "packages": ["@fontsource/geist-sans", "@fontsource/geist-mono"]
+  },
+  "typography": {
+    "headingWeight": 600,
+    "headingTracking": "-0.025em"
+  },
+  "radius": "10px",
+  "borderWidth": "1px",
+  "shadow": "0 1px 2px rgba(0,0,0,0.05), 0 12px 32px -12px rgba(0,0,0,0.12)",
+  "effects": [],
+  "motion": {
+    "durationMs": 500,
+    "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
+    "entrance": "fade-up"
+  },
+  "mermaid": {
+    "look": "neo",
+    "themeVariables": {}
+  },
+  "signature": [
+    "Neutral zinc greys with one calm blue accent",
+    "1px hairline borders on soft white cards",
+    "Line icons with rounded caps",
+    "Even spacing and medium-weight headings"
+  ],
+  "avoid": ["Saturated gradients", "Heavy drop shadows", "Decorative or script fonts"]
+}

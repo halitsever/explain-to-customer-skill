@@ -1,0 +1,54 @@
+{
+  "id": "blueprint",
+  "name": "Blueprint",
+  "family": "Extended",
+  "defaultMode": "dark",
+  "description": "Technical drawing on blue grid paper with dimension-line callouts.",
+  "bestFor": "Architecture, integrations, infrastructure, how-it-works diagrams.",
+  "colors": {
+    "background": "#0B3D91",
+    "surface": "#0E469F",
+    "foreground": "#F0F8FF",
+    "muted": "#0F4AA6",
+    "mutedForeground": "#B4D3F7",
+    "border": "rgba(224,242,255,0.55)",
+    "primary": "#E0F2FF",
+    "primaryForeground": "#0B3D91",
+    "accent": "#FFD166",
+    "success": "#7EE2B8",
+    "warning": "#FFD166",
+    "danger": "#FF9A8F"
+  },
+  "fonts": {
+    "heading": "JetBrains Mono",
+    "body": "IBM Plex Sans",
+    "mono": "JetBrains Mono",
+    "packages": ["@fontsource/jetbrains-mono", "@fontsource/ibm-plex-sans"]
+  },
+  "typography": {
+    "headingWeight": 700,
+    "headingTracking": "0.02em",
+    "headingCase": "uppercase",
+    "scale": 0.9
+  },
+  "radius": "0px",
+  "borderWidth": "2px",
+  "shadow": "none",
+  "effects": ["blueprint-grid", "dimension-lines", "square"],
+  "motion": {
+    "durationMs": 650,
+    "easing": "cubic-bezier(0.65, 0, 0.35, 1)",
+    "entrance": "wipe"
+  },
+  "mermaid": {
+    "look": "classic",
+    "themeVariables": {
+      "primaryColor": "#0E469F",
+      "primaryTextColor": "#F0F8FF",
+      "primaryBorderColor": "#E0F2FF",
+      "lineColor": "#E0F2FF"
+    }
+  },
+  "signature": ["Blueprint blue with minor and major grid lines", "Pale #E0F2FF line work", "Uppercase JetBrains Mono labels", "Dimension-line callouts"],
+  "avoid": ["Filled colourful shapes", "Rounded corners", "Photographic screenshots without a frame"]
+}

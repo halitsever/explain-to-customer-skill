@@ -1,0 +1,60 @@
+{
+  "id": "nord",
+  "name": "Nord",
+  "family": "Extended",
+  "defaultMode": "dark",
+  "description": "Calm arctic developer palette with frost blues and aurora accents.",
+  "bestFor": "Developer tools and calm technical updates.",
+  "inspiredBy": "Nord colour palette",
+  "colors": {
+    "background": "#2E3440",
+    "surface": "#3B4252",
+    "foreground": "#ECEFF4",
+    "muted": "#434C5E",
+    "mutedForeground": "#D8DEE9",
+    "border": "#4C566A",
+    "primary": "#88C0D0",
+    "primaryForeground": "#2E3440",
+    "accent": "#81A1C1",
+    "success": "#A3BE8C",
+    "warning": "#EBCB8B",
+    "danger": "#BF616A"
+  },
+  "lightColors": {
+    "background": "#ECEFF4",
+    "surface": "#E5E9F0",
+    "foreground": "#2E3440",
+    "muted": "#D8DEE9",
+    "mutedForeground": "#4C566A",
+    "border": "#D8DEE9",
+    "primary": "#5E81AC",
+    "primaryForeground": "#ECEFF4",
+    "accent": "#5E81AC"
+  },
+  "palette": ["#88C0D0", "#81A1C1", "#A3BE8C", "#EBCB8B", "#B48EAD"],
+  "fonts": {
+    "heading": "Inter",
+    "body": "Inter",
+    "mono": "JetBrains Mono",
+    "packages": ["@fontsource/inter", "@fontsource/jetbrains-mono"]
+  },
+  "typography": {
+    "headingWeight": 600,
+    "headingTracking": "-0.02em"
+  },
+  "radius": "8px",
+  "borderWidth": "1px",
+  "shadow": "0 8px 24px rgba(0,0,0,0.25)",
+  "effects": [],
+  "motion": {
+    "durationMs": 600,
+    "easing": "cubic-bezier(0.25, 1, 0.5, 1)",
+    "entrance": "fade-up"
+  },
+  "mermaid": {
+    "look": "classic",
+    "themeVariables": {}
+  },
+  "signature": ["Polar night #2E3440 background", "Frost blues #88C0D0 and #81A1C1", "Aurora red, green, yellow, purple accents", "Low-contrast calm surfaces"],
+  "avoid": ["Pure black or pure white", "Neon colours"]
+}
