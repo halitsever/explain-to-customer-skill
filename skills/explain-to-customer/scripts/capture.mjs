@@ -174,7 +174,10 @@ async function shoot(browser, base, shot, plan, outDir, prefix, secrets, tokens)
     const box = await page.locator(shot.clip).first().boundingBox();
     if (box) {
       const pad = shot.clipPadding ?? 16;
-      clip = { x: Math.max(0, box.x - pad), y: Math.max(0, box.y - pad), width: Math.min(vp.width, box.width + pad * 2), height: box.height + pad * 2 };
+      // Numbered badges sit left of each box, so a tight crop keeps a 64 px margin on that side.
+      const left = (shot.highlights || []).length ? Math.max(pad, 64) : pad;
+      const x = Math.max(0, box.x - left);
+      clip = { x, y: Math.max(0, box.y - pad), width: Math.min(vp.width - x, box.x - x + box.width + pad), height: box.height + pad * 2 };
     }
   }
   const highlights = [];
