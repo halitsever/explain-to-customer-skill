@@ -1,7 +1,10 @@
 <p align="center" class="logo-section">
-<img src="https://i.ibb.co/NrPh9xP/image.png" height="80" width="80"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/brand/logo-mark-dark.svg">
+  <img src="docs/brand/logo-mark.svg" height="80" width="80" alt="explain-to-customer logo"/>
+</picture>
 <br/>
-<img src="https://halitsever-api.vercel.app/api/repo-title?title=explain-to-customer-skill">
+<img src="https://halitsever-api.vercel.app/api/repo-title?title=%2Fexplain-to-customer" alt="/explain-to-customer">
 
 <p align="center">
 A Claude Code skill that turns a code change into a short video, slides and diagrams you can send to a client.<br>
@@ -15,7 +18,7 @@ A Claude Code skill that turns a code change into a short video, slides and diag
 </p>
 
 <p align="center">
-<img src="docs/demo.gif" width="720" alt="A 40-second explainer video rendered by the skill"/>
+<img src="docs/demo.gif" width="720" alt="A 43-second explainer video rendered by the skill"/>
 </p>
 
 <p align="center">
@@ -33,14 +36,16 @@ The skill reads the diff and the code around it, quotes the product's real UI st
 
 | shadcn | Whiteboard | Linear |
 |---|---|---|
-| <img src="docs/example-shadcn.png" width="300"/> | <img src="docs/example-whiteboard.png" width="300"/> | <img src="docs/example-linear.png" width="300"/> |
+| <img src="docs/examples/summary-shadcn.png" width="300" alt="Summary card in the shadcn style"/> | <img src="docs/examples/summary-whiteboard.png" width="300" alt="Summary card in the whiteboard style"/> | <img src="docs/examples/callouts-linear.png" width="300" alt="Annotated screenshot in the linear style"/> |
+
+The same change in three styles: switching style re-renders the existing storyboard, no rewrite needed.
 
 ### Styles
 
 21 styles inspired by public design languages, plus **Match my project**, which builds a style from your repo's own colours, fonts, radius and logo (shadcn/Tailwind CSS variables, `tailwind.config`, MUI/Chakra/Mantine themes, design tokens, `next/font`). You can also pass brand hex colours or a website URL.
 
 <p align="center">
-<img src="styles-preview.png" alt="All 21 styles"/>
+<img src="skills/explain-to-customer/styles-preview.png" alt="All 21 styles"/>
 </p>
 
 | Family | Styles |
@@ -58,21 +63,35 @@ Every style is checked for WCAG AA contrast before rendering, and uses open font
 
 Requirements: [Claude Code](https://github.com/anthropics/claude-code), Node.js 22 or newer (older versions fall back to a slower video engine), FFmpeg and git. The GitHub CLI is optional, for `PR#123` scopes.
 
+Install it with the [skills](https://github.com/vercel-labs/skills) CLI, the installer behind [skills.sh](https://skills.sh):
+
+```bash
+npx skills add halitsever/explain-to-customer-skill -g -a claude-code
+```
+
+`-g` installs it for your user, so it works in every project; leave it out to install into the current project only. `-a claude-code` skips the agent picker. Update with `npx skills update explain-to-customer -g`, remove with `npx skills remove explain-to-customer -g`.
+
+<details>
+<summary>Manual install with git</summary>
+
 ```bash
 # macOS / Linux
-git clone https://github.com/halitsever/explain-to-customer-skill ~/.claude/skills/explain-to-customer
+git clone https://github.com/halitsever/explain-to-customer-skill ~/explain-to-customer-skill
+ln -s ~/explain-to-customer-skill/skills/explain-to-customer ~/.claude/skills/explain-to-customer
 
 # Windows (PowerShell)
-git clone https://github.com/halitsever/explain-to-customer-skill "$env:USERPROFILE\.claude\skills\explain-to-customer"
+git clone https://github.com/halitsever/explain-to-customer-skill "$env:USERPROFILE\explain-to-customer-skill"
+Copy-Item -Recurse "$env:USERPROFILE\explain-to-customer-skill\skills\explain-to-customer" "$env:USERPROFILE\.claude\skills\"
 ```
+
+Update with `git pull` in the clone (on Windows, copy the folder again).
+</details>
 
 If `~/.claude/skills` did not exist before, run `/reload-skills` once in Claude Code.
 
 FFmpeg: `brew install ffmpeg`, `winget install Gyan.FFmpeg` or `sudo apt install ffmpeg`. Without admin rights the skill can install a static build for you.
 
 The first run asks to install the rendering toolchain once, about 250 MB of downloads: npm packages (~151 MB) and a headless Chromium (~99 MB, skipped when Playwright already has it). Everything goes into `~/.cache/explain-to-customer` (`%LOCALAPPDATA%\explain-to-customer` on Windows), never into your project.
-
-To update: `git -C ~/.claude/skills/explain-to-customer pull`.
 
 ## Usage
 
@@ -124,14 +143,15 @@ Tweaks after delivery are cheap: ask for a shorter cut, another language or anot
 
 ### Development
 
+The skill lives in `skills/explain-to-customer/`: `SKILL.md` is the entry point, long guidance is in `reference/`, styles in `styles/`, scene templates in `templates/scenes/` and the Node scripts in `scripts/`. `docs/` holds the README images and the logo.
+
 ```bash
+cd skills/explain-to-customer
 node --test scripts/test/paths.test.mjs   # save-path resolution on macOS, Windows, Linux and WSL
 node scripts/theme.mjs --validate         # every style against styles/_schema.json
 node scripts/styles-preview.mjs           # regenerate styles-preview.png
 npx prettier --write "scripts/**/*.mjs" "templates/scenes/*.{js,css}" "styles/*.json"
 ```
-
-`SKILL.md` is the entry point. Long guidance lives in `reference/`, styles in `styles/`, scene templates in `templates/scenes/` and the Node scripts in `scripts/`.
 
 Third-party tools are installed into the tool workspace, not bundled: HyperFrames and Playwright (Apache-2.0), mermaid-cli, culori and rough.js (MIT), GSAP (standard no-charge license), fonts from Fontsource and Selawik (SIL OFL). Remotion is not used because of its company licence. Style names only describe what inspired them; no logos, trademarks or proprietary fonts are included.
 
