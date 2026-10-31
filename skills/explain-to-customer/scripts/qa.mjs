@@ -25,7 +25,6 @@ const SECRET = [
   [/AIza[0-9A-Za-z_-]{35}/, "Google API key"],
   [/-----BEGIN [A-Z ]*PRIVATE KEY/, "private key"],
   [/\beyJ[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}/, "JWT"],
-  [/\b(password|passwd|secret|api[_-]?key|token)\s*[:=]\s*\S+/i, "credential assignment"],
 ];
 const INTERNAL_URL =
   /\b(?:https?:\/\/)?(?:localhost|127\.0\.0\.1|0\.0\.0\.0|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(?:1[6-9]|2\d|3[01])\.\d+\.\d+|[\w.-]+\.(?:local|internal|intranet|corp|lan))(?::\d+)?\b/i;
@@ -47,6 +46,9 @@ function lintText(where, text, { onScreen, technical }) {
   const s = String(text ?? "");
   if (!s.trim()) return;
   for (const [re, name] of SECRET) if (re.test(s)) err(where, `possible ${name}: "${s.slice(0, 60)}"`);
+  // A credential value has digits or symbols, or is long; "Password: Password must be…" is product copy.
+  const cred = s.match(/\b(password|passwd|secret|api[_-]?key|token)\s*[:=]\s*["']?([^\s"']{6,})/i);
+  if (cred && (/[\d_\-+/=$!@#%]/.test(cred[2]) || cred[2].length >= 16)) err(where, `possible credential assignment: "${s.slice(0, 60)}"`);
   if (INTERNAL_URL.test(s)) err(where, `internal host or URL on ${onScreen ? "screen" : "page"}: "${s.match(INTERNAL_URL)[0]}"`);
   else if (URL_RE.test(s) && onScreen) warn(where, `URL on screen, check it is public: ${s.match(URL_RE)[0]}`);
   const em = s.match(EMAIL);
