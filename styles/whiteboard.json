@@ -1,0 +1,65 @@
+{
+  "id": "whiteboard",
+  "name": "Whiteboard",
+  "family": "Bold & creative",
+  "defaultMode": "light",
+  "description": "Hand-drawn sketch on paper with marker highlights and draw-on strokes.",
+  "bestFor": "Explaining flows and concepts, workshops, friendly non-technical audiences.",
+  "colors": {
+    "background": "#FDFBF7",
+    "surface": "#FFFFFF",
+    "foreground": "#1E1E1E",
+    "muted": "#F3F0E8",
+    "mutedForeground": "#4F4F4F",
+    "border": "#1E1E1E",
+    "primary": "#1971C2",
+    "primaryForeground": "#FFFFFF",
+    "accent": "#E03131",
+    "success": "#B2F2BB",
+    "warning": "#FFEC99",
+    "danger": "#FFC9C9"
+  },
+  "palette": ["#FFEC99", "#B2F2BB", "#A5D8FF", "#FFC9C9", "#D0BFFF"],
+  "fonts": {
+    "heading": "Caveat",
+    "body": "Kalam",
+    "mono": "JetBrains Mono",
+    "packages": ["@fontsource/caveat", "@fontsource/kalam", "@fontsource/jetbrains-mono"]
+  },
+  "typography": {
+    "headingWeight": 700,
+    "bodyWeight": 400,
+    "headingTracking": "0em",
+    "scale": 1.12
+  },
+  "radius": "14px",
+  "borderWidth": "0px",
+  "shadow": "none",
+  "effects": ["paper", "rough", "marker", "pastel-cards"],
+  "motion": {
+    "durationMs": 800,
+    "easing": "cubic-bezier(0.45, 0, 0.55, 1)",
+    "entrance": "draw",
+    "stagger": 0.25
+  },
+  "mermaid": {
+    "look": "handDrawn",
+    "fontFamily": "Kalam",
+    "themeVariables": {
+      "primaryColor": "#FFEC99",
+      "secondaryColor": "#A5D8FF",
+      "tertiaryColor": "#B2F2BB",
+      "primaryBorderColor": "#1E1E1E",
+      "lineColor": "#1E1E1E",
+      "fontSize": "20px"
+    }
+  },
+  "signature": [
+    "Off-white paper with faint dots",
+    "Rough hand-drawn outlines (rough.js)",
+    "Marker highlights in pastel yellow, green, blue, pink, lilac",
+    "Caveat headings, Kalam body",
+    "Strokes that draw themselves on"
+  ],
+  "avoid": ["Pixel-perfect geometry", "Dark backgrounds", "Corporate gradients"]
+}

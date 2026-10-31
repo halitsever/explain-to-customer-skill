@@ -1,0 +1,180 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "explain-to-customer/style",
+  "title": "Visual style for customer explainers",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "family",
+    "defaultMode",
+    "description",
+    "bestFor",
+    "colors",
+    "fonts",
+    "radius",
+    "borderWidth",
+    "shadow",
+    "effects",
+    "motion",
+    "mermaid",
+    "signature",
+    "avoid"
+  ],
+  "additionalProperties": false,
+  "definitions": {
+    "color": { "type": "string", "minLength": 3, "pattern": "^(#[0-9a-fA-F]{3,8}|(rgb|rgba|hsl|hsla|oklch|oklab|lab|lch|color)\\(.+\\)|transparent)$" },
+    "colorSet": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "background": { "$ref": "#/definitions/color" },
+        "surface": { "$ref": "#/definitions/color" },
+        "foreground": { "$ref": "#/definitions/color" },
+        "muted": { "$ref": "#/definitions/color" },
+        "mutedForeground": { "$ref": "#/definitions/color" },
+        "border": { "$ref": "#/definitions/color" },
+        "primary": { "$ref": "#/definitions/color" },
+        "primaryForeground": { "$ref": "#/definitions/color" },
+        "accent": { "$ref": "#/definitions/color" },
+        "success": { "$ref": "#/definitions/color" },
+        "warning": { "$ref": "#/definitions/color" },
+        "danger": { "$ref": "#/definitions/color" }
+      }
+    },
+    "fullColorSet": {
+      "allOf": [
+        { "$ref": "#/definitions/colorSet" },
+        { "required": ["background", "surface", "foreground", "muted", "mutedForeground", "border", "primary", "primaryForeground", "accent", "success", "warning", "danger"] }
+      ]
+    },
+    "length": { "type": "string", "pattern": "^-?[0-9.]+(px|rem|em)$|^0$" }
+  },
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "name": { "type": "string", "minLength": 2 },
+    "family": { "type": "string", "enum": ["Modern SaaS", "Clean & friendly", "Bold & creative", "Extended", "Project", "Custom"] },
+    "defaultMode": { "type": "string", "enum": ["light", "dark"] },
+    "description": { "type": "string", "minLength": 10 },
+    "bestFor": { "type": "string", "minLength": 5 },
+    "inspiredBy": { "type": "string" },
+    "colors": { "$ref": "#/definitions/fullColorSet" },
+    "lightColors": { "$ref": "#/definitions/colorSet" },
+    "darkColors": { "$ref": "#/definitions/colorSet" },
+    "palette": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/color" },
+      "maxItems": 6,
+      "description": "Decorative fills for cards and steps. Text on them uses the foreground color."
+    },
+    "background": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "gradient": { "type": "array", "items": { "$ref": "#/definitions/color" }, "minItems": 2, "maxItems": 4 },
+        "angle": { "type": "number" },
+        "mesh": { "type": "array", "items": { "$ref": "#/definitions/color" }, "minItems": 2, "maxItems": 6 },
+        "overlay": { "$ref": "#/definitions/color" }
+      }
+    },
+    "fonts": {
+      "type": "object",
+      "required": ["heading", "body", "mono", "packages"],
+      "additionalProperties": false,
+      "properties": {
+        "heading": { "type": "string" },
+        "body": { "type": "string" },
+        "mono": { "type": "string" },
+        "packages": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "typography": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "headingWeight": { "type": "integer", "minimum": 100, "maximum": 900 },
+        "bodyWeight": { "type": "integer", "minimum": 100, "maximum": 900 },
+        "headingTracking": { "type": "string" },
+        "headingCase": { "type": "string", "enum": ["none", "uppercase"] },
+        "scale": { "type": "number", "minimum": 0.8, "maximum": 1.3 }
+      }
+    },
+    "radius": { "$ref": "#/definitions/length" },
+    "borderWidth": { "$ref": "#/definitions/length" },
+    "shadow": { "type": "string" },
+    "effects": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "grid",
+          "glow",
+          "gradient-text",
+          "mesh",
+          "slant",
+          "keynote",
+          "callouts",
+          "toggle-list",
+          "tonal",
+          "mica",
+          "hard-shadow",
+          "aurora",
+          "glass",
+          "paper",
+          "rough",
+          "marker",
+          "scanlines",
+          "crt-glow",
+          "diff",
+          "blueprint-grid",
+          "dimension-lines",
+          "huge-numerals",
+          "ruled",
+          "accent-rule",
+          "clay",
+          "pastel-cards",
+          "square"
+        ]
+      }
+    },
+    "motion": {
+      "type": "object",
+      "required": ["durationMs", "easing", "entrance"],
+      "additionalProperties": false,
+      "properties": {
+        "durationMs": { "type": "integer", "minimum": 100, "maximum": 2000 },
+        "easing": { "type": "string" },
+        "entrance": { "type": "string", "enum": ["fade", "fade-up", "blur-in", "pop", "slide", "typewriter", "draw", "wipe"] },
+        "stagger": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "mermaid": {
+      "type": "object",
+      "required": ["look", "themeVariables"],
+      "additionalProperties": false,
+      "properties": {
+        "look": { "type": "string", "enum": ["classic", "neo", "handDrawn"] },
+        "themeVariables": { "type": "object", "additionalProperties": { "type": ["string", "number", "boolean"] } },
+        "themeCSS": { "type": "string" },
+        "fontFamily": { "type": "string" }
+      }
+    },
+    "variants": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "description": { "type": "string" },
+          "colors": { "$ref": "#/definitions/colorSet" },
+          "palette": { "type": "array", "items": { "$ref": "#/definitions/color" } }
+        }
+      }
+    },
+    "signature": { "type": "array", "items": { "type": "string" }, "minItems": 3, "maxItems": 5 },
+    "avoid": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "logo": { "type": "string", "description": "Path to a logo file from the project repo. Never a downloaded logo." },
+    "detection": { "type": "object", "description": "Match my project: which tokens were detected and which were guessed." }
+  }
+}

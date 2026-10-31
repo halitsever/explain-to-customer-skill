@@ -1,0 +1,59 @@
+{
+  "id": "carbon",
+  "name": "IBM Carbon",
+  "family": "Extended",
+  "defaultMode": "light",
+  "description": "Square, grid-based and data-dense with IBM Plex type.",
+  "bestFor": "Enterprise data products, analytics, B2B dashboards.",
+  "inspiredBy": "IBM Carbon Design System",
+  "colors": {
+    "background": "#FFFFFF",
+    "surface": "#F4F4F4",
+    "foreground": "#161616",
+    "muted": "#F4F4F4",
+    "mutedForeground": "#525252",
+    "border": "#E0E0E0",
+    "primary": "#0F62FE",
+    "primaryForeground": "#FFFFFF",
+    "accent": "#8A3FFC",
+    "success": "#198038",
+    "warning": "#B28600",
+    "danger": "#DA1E28"
+  },
+  "darkColors": {
+    "background": "#161616",
+    "surface": "#262626",
+    "foreground": "#F4F4F4",
+    "muted": "#262626",
+    "mutedForeground": "#C6C6C6",
+    "border": "#393939",
+    "primary": "#4589FF",
+    "primaryForeground": "#000000",
+    "accent": "#A56EFF"
+  },
+  "fonts": {
+    "heading": "IBM Plex Sans",
+    "body": "IBM Plex Sans",
+    "mono": "IBM Plex Mono",
+    "packages": ["@fontsource/ibm-plex-sans", "@fontsource/ibm-plex-mono"]
+  },
+  "typography": {
+    "headingWeight": 400,
+    "headingTracking": "0em"
+  },
+  "radius": "0px",
+  "borderWidth": "1px",
+  "shadow": "none",
+  "effects": ["square", "grid"],
+  "motion": {
+    "durationMs": 240,
+    "easing": "cubic-bezier(0.2, 0, 0.38, 0.9)",
+    "entrance": "wipe"
+  },
+  "mermaid": {
+    "look": "classic",
+    "themeVariables": {}
+  },
+  "signature": ["Zero radius, strict 2x grid", "IBM Plex Sans light-weight headlines", "Blue 60 interactive colour", "Productive, quick motion"],
+  "avoid": ["Rounded corners", "Gradients", "Playful illustrations"]
+}

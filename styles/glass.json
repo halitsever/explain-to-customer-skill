@@ -1,0 +1,58 @@
+{
+  "id": "glass",
+  "name": "Glassmorphism",
+  "family": "Bold & creative",
+  "defaultMode": "dark",
+  "description": "Frosted glass panels floating over a vivid purple-blue aurora gradient.",
+  "bestFor": "Consumer apps, mobile features, visually rich launches.",
+  "colors": {
+    "background": "#667EEA",
+    "surface": "rgba(255,255,255,0.14)",
+    "foreground": "#FFFFFF",
+    "muted": "rgba(255,255,255,0.10)",
+    "mutedForeground": "#EEEBFF",
+    "border": "rgba(255,255,255,0.30)",
+    "primary": "#FFFFFF",
+    "primaryForeground": "#3B2A7A",
+    "accent": "#FFD166",
+    "success": "#7CF2B5",
+    "warning": "#FFD166",
+    "danger": "#FF8FA3"
+  },
+  "background": {
+    "gradient": ["#667EEA", "#764BA2"],
+    "angle": 135,
+    "mesh": ["#F093FB", "#4FACFE", "#43E97B"],
+    "overlay": "rgba(16,10,48,0.38)"
+  },
+  "fonts": {
+    "heading": "Plus Jakarta Sans",
+    "body": "Plus Jakarta Sans",
+    "mono": "JetBrains Mono",
+    "packages": ["@fontsource/plus-jakarta-sans", "@fontsource/jetbrains-mono"]
+  },
+  "typography": {
+    "headingWeight": 700,
+    "headingTracking": "-0.03em"
+  },
+  "radius": "24px",
+  "borderWidth": "1px",
+  "shadow": "0 8px 32px rgba(15,10,60,0.35)",
+  "effects": ["aurora", "glass"],
+  "motion": {
+    "durationMs": 700,
+    "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
+    "entrance": "blur-in"
+  },
+  "mermaid": {
+    "look": "classic",
+    "themeVariables": {}
+  },
+  "signature": [
+    "Purple-blue gradient with blurred colour blobs",
+    "Frosted panels: 14% white, 20px blur, 30% white border",
+    "White text kept at AA with a dark scrim",
+    "Large soft radii"
+  ],
+  "avoid": ["Flat solid backgrounds", "Dark text on glass", "Hard shadows"]
+}

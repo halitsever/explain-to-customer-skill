@@ -8,7 +8,7 @@ Security fixes are only made for the latest release.
 
 Please don't report security problems through public issues, discussions or pull requests.
 
-Report them privately through [GitHub's private vulnerability reporting](https://github.com/halitsever/repo_name/security/advisories/new). If that isn't available, email [halitsever@protonmail.com](mailto:halitsever@protonmail.com).
+Report them privately through [GitHub's private vulnerability reporting](https://github.com/halitsever/explain-to-customer-skill/security/advisories/new). If that isn't available, email [halitsever@protonmail.com](mailto:halitsever@protonmail.com).
 
 A useful report includes:
 

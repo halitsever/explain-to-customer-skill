@@ -1,0 +1,54 @@
+{
+  "id": "clay",
+  "name": "Claymorphism",
+  "family": "Extended",
+  "defaultMode": "light",
+  "description": "Puffy pastel 3D cards with soft inner and outer shadows. Playful.",
+  "bestFor": "Consumer, kids, education and playful product updates.",
+  "colors": {
+    "background": "#F2E9FF",
+    "surface": "#FBF7FF",
+    "foreground": "#2D2350",
+    "muted": "#E9DCFF",
+    "mutedForeground": "#584C7D",
+    "border": "#E3D4FF",
+    "primary": "#7C3AED",
+    "primaryForeground": "#FFFFFF",
+    "accent": "#FF6F91",
+    "success": "#34D399",
+    "warning": "#FBBF24",
+    "danger": "#F87171"
+  },
+  "palette": ["#FFD6E8", "#D6F5E3", "#D6E9FF", "#FFF1C2", "#E9DCFF"],
+  "fonts": {
+    "heading": "Nunito",
+    "body": "Nunito",
+    "mono": "JetBrains Mono",
+    "packages": ["@fontsource/nunito", "@fontsource/jetbrains-mono"]
+  },
+  "typography": {
+    "headingWeight": 900,
+    "bodyWeight": 600,
+    "headingTracking": "-0.015em"
+  },
+  "radius": "32px",
+  "borderWidth": "0px",
+  "shadow": "18px 18px 36px rgba(124,58,237,0.18), -12px -12px 28px rgba(255,255,255,0.95), inset 6px 6px 12px rgba(255,255,255,0.75), inset -8px -8px 16px rgba(124,58,237,0.10)",
+  "effects": ["clay", "pastel-cards"],
+  "motion": {
+    "durationMs": 650,
+    "easing": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+    "entrance": "pop"
+  },
+  "mermaid": {
+    "look": "classic",
+    "themeVariables": {
+      "primaryColor": "#E9DCFF",
+      "primaryBorderColor": "#7C3AED",
+      "secondaryColor": "#FFD6E8",
+      "tertiaryColor": "#D6F5E3"
+    }
+  },
+  "signature": ["Puffy cards with double inner and outer shadows", "32px radius", "Pastel pink, mint, sky, butter, lilac", "Heavy rounded Nunito", "Bouncy pop-in"],
+  "avoid": ["Thin lines", "Dark mode", "Sharp corners"]
+}

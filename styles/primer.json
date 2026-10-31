@@ -1,0 +1,61 @@
+{
+  "id": "primer",
+  "name": "GitHub Primer",
+  "family": "Extended",
+  "defaultMode": "light",
+  "description": "Developer-familiar GitHub look with diff-style red and green before/after.",
+  "bestFor": "Open source, developer tools, code-adjacent features (audience=technical fits well).",
+  "inspiredBy": "GitHub Primer",
+  "colors": {
+    "background": "#FFFFFF",
+    "surface": "#F6F8FA",
+    "foreground": "#1F2328",
+    "muted": "#F6F8FA",
+    "mutedForeground": "#59636E",
+    "border": "#D0D7DE",
+    "primary": "#1F883D",
+    "primaryForeground": "#FFFFFF",
+    "accent": "#0969DA",
+    "success": "#1A7F37",
+    "warning": "#9A6700",
+    "danger": "#D1242F"
+  },
+  "darkColors": {
+    "background": "#0D1117",
+    "surface": "#151B23",
+    "foreground": "#F0F6FC",
+    "muted": "#151B23",
+    "mutedForeground": "#9198A1",
+    "border": "#3D444D",
+    "primary": "#238636",
+    "primaryForeground": "#FFFFFF",
+    "accent": "#4493F8",
+    "success": "#3FB950",
+    "danger": "#F85149"
+  },
+  "fonts": {
+    "heading": "Mona Sans",
+    "body": "Mona Sans",
+    "mono": "JetBrains Mono",
+    "packages": ["@fontsource/mona-sans", "@fontsource/jetbrains-mono"]
+  },
+  "typography": {
+    "headingWeight": 600,
+    "headingTracking": "-0.02em"
+  },
+  "radius": "6px",
+  "borderWidth": "1px",
+  "shadow": "0 1px 0 rgba(31,35,40,0.04)",
+  "effects": ["diff"],
+  "motion": {
+    "durationMs": 300,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "entrance": "fade-up"
+  },
+  "mermaid": {
+    "look": "classic",
+    "themeVariables": {}
+  },
+  "signature": ["Canvas grey #F6F8FA panels with #D0D7DE borders", "Diff-style red/green before and after", "Mona Sans", "Accent blue #0969DA"],
+  "avoid": ["Gradients and glows", "Large radii", "Script fonts"]
+}

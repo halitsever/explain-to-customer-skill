@@ -1,0 +1,64 @@
+{
+  "id": "material",
+  "name": "Material 3",
+  "family": "Clean & friendly",
+  "defaultMode": "light",
+  "description": "Tonal surfaces, big rounded shapes and expressive but calm motion.",
+  "bestFor": "Android apps, Google-ecosystem products, consumer apps.",
+  "inspiredBy": "Material Design 3",
+  "colors": {
+    "background": "#FEF7FF",
+    "surface": "#F3EDF7",
+    "foreground": "#1D1B20",
+    "muted": "#E7E0EC",
+    "mutedForeground": "#49454F",
+    "border": "#CAC4D0",
+    "primary": "#6750A4",
+    "primaryForeground": "#FFFFFF",
+    "accent": "#7D5260",
+    "success": "#386A20",
+    "warning": "#7C5800",
+    "danger": "#B3261E"
+  },
+  "darkColors": {
+    "background": "#141218",
+    "surface": "#211F26",
+    "foreground": "#E6E0E9",
+    "muted": "#36343B",
+    "mutedForeground": "#CAC4D0",
+    "border": "#49454F",
+    "primary": "#D0BCFF",
+    "primaryForeground": "#381E72",
+    "accent": "#EFB8C8"
+  },
+  "palette": ["#EADDFF", "#FFD8E4", "#E8DEF8", "#D3E8D3", "#FFDDB3"],
+  "fonts": {
+    "heading": "Roboto",
+    "body": "Roboto",
+    "mono": "JetBrains Mono",
+    "packages": ["@fontsource/roboto", "@fontsource/jetbrains-mono"]
+  },
+  "typography": {
+    "headingWeight": 500,
+    "headingTracking": "-0.01em"
+  },
+  "radius": "24px",
+  "borderWidth": "0px",
+  "shadow": "0 1px 3px rgba(0,0,0,0.15), 0 1px 2px rgba(0,0,0,0.1)",
+  "effects": ["tonal"],
+  "motion": {
+    "durationMs": 500,
+    "easing": "cubic-bezier(0.2, 0, 0, 1)",
+    "entrance": "pop"
+  },
+  "mermaid": {
+    "look": "classic",
+    "themeVariables": {
+      "primaryColor": "#EADDFF",
+      "primaryTextColor": "#21005D",
+      "primaryBorderColor": "#6750A4"
+    }
+  },
+  "signature": ["Tonal purple surfaces instead of borders", "Large 24-28px corner radius", "Roboto at medium weight", "Emphasized easing curve"],
+  "avoid": ["Hairline grids", "Sharp corners", "Black backgrounds"]
+}

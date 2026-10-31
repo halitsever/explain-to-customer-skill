@@ -1,0 +1,65 @@
+{
+  "id": "vercel",
+  "name": "Vercel",
+  "family": "Modern SaaS",
+  "defaultMode": "dark",
+  "description": "Monochrome and high-contrast with hairline grids. Blue accent used sparingly.",
+  "bestFor": "Developer tools, deployments, performance and infrastructure changes.",
+  "inspiredBy": "Vercel Geist design system",
+  "colors": {
+    "background": "#000000",
+    "surface": "#0A0A0A",
+    "foreground": "#EDEDED",
+    "muted": "#1A1A1A",
+    "mutedForeground": "#A1A1A1",
+    "border": "#2E2E2E",
+    "primary": "#EDEDED",
+    "primaryForeground": "#0A0A0A",
+    "accent": "#0070F3",
+    "success": "#45A557",
+    "warning": "#F5A623",
+    "danger": "#E5484D"
+  },
+  "lightColors": {
+    "background": "#FFFFFF",
+    "surface": "#FAFAFA",
+    "foreground": "#000000",
+    "muted": "#F2F2F2",
+    "mutedForeground": "#666666",
+    "border": "#EAEAEA",
+    "primary": "#000000",
+    "primaryForeground": "#FFFFFF",
+    "accent": "#0070F3"
+  },
+  "fonts": {
+    "heading": "Geist",
+    "body": "Geist",
+    "mono": "Geist Mono",
+    "packages": ["@fontsource/geist-sans", "@fontsource/geist-mono"]
+  },
+  "typography": {
+    "headingWeight": 600,
+    "headingTracking": "-0.04em"
+  },
+  "radius": "8px",
+  "borderWidth": "1px",
+  "shadow": "0 0 0 1px rgba(255,255,255,0.06)",
+  "effects": ["grid"],
+  "motion": {
+    "durationMs": 450,
+    "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+    "entrance": "fade-up"
+  },
+  "mermaid": {
+    "look": "neo",
+    "themeVariables": {}
+  },
+  "signature": [
+    "Pure black and white with a grey ramp",
+    "Hairline grid backdrop",
+    "Geist Sans with Geist Mono labels",
+    "Tight negative letter-spacing on headings",
+    "Blue only for the one thing that matters"
+  ],
+  "avoid": ["Colourful palettes", "Rounded bubbly shapes", "Soft pastel tints"]
+}

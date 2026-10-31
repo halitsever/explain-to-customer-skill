@@ -1,0 +1,51 @@
+{
+  "id": "stripe",
+  "name": "Stripe",
+  "family": "Modern SaaS",
+  "defaultMode": "light",
+  "description": "Polished fintech look: animated gradient mesh, slanted colour bands, navy type.",
+  "bestFor": "Payments, billing, checkout, onboarding and anything that should feel premium.",
+  "inspiredBy": "Stripe marketing pages",
+  "colors": {
+    "background": "#FFFFFF",
+    "surface": "#F6F9FC",
+    "foreground": "#0A2540",
+    "muted": "#F6F9FC",
+    "mutedForeground": "#425466",
+    "border": "#E3E8EE",
+    "primary": "#635BFF",
+    "primaryForeground": "#FFFFFF",
+    "accent": "#A960EE",
+    "success": "#09825D",
+    "warning": "#C84801",
+    "danger": "#DF1B41"
+  },
+  "background": {
+    "mesh": ["#A960EE", "#FF333D", "#90E0FF", "#FFCB57"]
+  },
+  "fonts": {
+    "heading": "Inter",
+    "body": "Inter",
+    "mono": "JetBrains Mono",
+    "packages": ["@fontsource/inter", "@fontsource/jetbrains-mono"]
+  },
+  "typography": {
+    "headingWeight": 700,
+    "headingTracking": "-0.03em"
+  },
+  "radius": "8px",
+  "borderWidth": "1px",
+  "shadow": "0 13px 27px -5px rgba(50,50,93,0.25), 0 8px 16px -8px rgba(0,0,0,0.3)",
+  "effects": ["mesh", "slant"],
+  "motion": {
+    "durationMs": 650,
+    "easing": "cubic-bezier(0.25, 1, 0.5, 1)",
+    "entrance": "slide"
+  },
+  "mermaid": {
+    "look": "neo",
+    "themeVariables": {}
+  },
+  "signature": ["Blurred gradient mesh in purple, red, cyan and yellow", "Slanted 10-degree colour band", "Deep navy text on white", "Elevated cards with blue-tinted shadows"],
+  "avoid": ["Flat grey layouts", "Monospace headlines", "Thick borders"]
+}

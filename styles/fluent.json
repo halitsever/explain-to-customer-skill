@@ -1,0 +1,59 @@
+{
+  "id": "fluent",
+  "name": "Fluent 2",
+  "family": "Clean & friendly",
+  "defaultMode": "light",
+  "description": "Enterprise-familiar with layered Mica-like surfaces and a confident brand blue.",
+  "bestFor": "Enterprise and Microsoft 365 audiences, admin portals, business apps.",
+  "inspiredBy": "Microsoft Fluent 2",
+  "colors": {
+    "background": "#F5F5F5",
+    "surface": "#FFFFFF",
+    "foreground": "#242424",
+    "muted": "#F0F0F0",
+    "mutedForeground": "#616161",
+    "border": "#E0E0E0",
+    "primary": "#0F6CBD",
+    "primaryForeground": "#FFFFFF",
+    "accent": "#0F6CBD",
+    "success": "#107C10",
+    "warning": "#BC4B09",
+    "danger": "#C50F1F"
+  },
+  "darkColors": {
+    "background": "#1F1F1F",
+    "surface": "#292929",
+    "foreground": "#FFFFFF",
+    "muted": "#333333",
+    "mutedForeground": "#ADADAD",
+    "border": "#3D3D3D",
+    "primary": "#479EF5",
+    "primaryForeground": "#000000",
+    "accent": "#479EF5"
+  },
+  "fonts": {
+    "heading": "Selawik",
+    "body": "Selawik",
+    "mono": "JetBrains Mono",
+    "packages": ["selawik (downloaded by setup.mjs)", "@fontsource/jetbrains-mono"]
+  },
+  "typography": {
+    "headingWeight": 600,
+    "headingTracking": "0em"
+  },
+  "radius": "8px",
+  "borderWidth": "1px",
+  "shadow": "0 2px 4px rgba(0,0,0,0.14), 0 0 2px rgba(0,0,0,0.12)",
+  "effects": ["mica"],
+  "motion": {
+    "durationMs": 367,
+    "easing": "cubic-bezier(0.1, 0.9, 0.2, 1)",
+    "entrance": "slide"
+  },
+  "mermaid": {
+    "look": "classic",
+    "themeVariables": {}
+  },
+  "signature": ["Layered white cards over a soft grey Mica backdrop", "Brand blue #0F6CBD", "Selawik, an open Segoe-like face", "Short decelerating slide-ins"],
+  "avoid": ["Playful pastel palettes", "Huge radii", "Hand-drawn elements"]
+}

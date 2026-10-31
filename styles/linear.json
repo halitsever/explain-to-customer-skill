@@ -1,0 +1,49 @@
+{
+  "id": "linear",
+  "name": "Linear",
+  "family": "Modern SaaS",
+  "defaultMode": "dark",
+  "description": "Dark and sleek with soft radial glows, gradient headline text and blur-in motion.",
+  "bestFor": "Product updates for modern SaaS, roadmap items, workflow features.",
+  "inspiredBy": "Linear",
+  "colors": {
+    "background": "#08090A",
+    "surface": "#141516",
+    "foreground": "#F7F8F8",
+    "muted": "#1C1D1F",
+    "mutedForeground": "#8A8F98",
+    "border": "rgba(255,255,255,0.08)",
+    "primary": "#5E6AD2",
+    "primaryForeground": "#FFFFFF",
+    "accent": "#828FFF",
+    "success": "#4CB782",
+    "warning": "#F2C94C",
+    "danger": "#EB5757"
+  },
+  "fonts": {
+    "heading": "Inter",
+    "body": "Inter",
+    "mono": "JetBrains Mono",
+    "packages": ["@fontsource/inter", "@fontsource/jetbrains-mono"]
+  },
+  "typography": {
+    "headingWeight": 600,
+    "headingTracking": "-0.035em"
+  },
+  "radius": "12px",
+  "borderWidth": "1px",
+  "shadow": "0 0 0 1px rgba(255,255,255,0.06), 0 24px 48px -16px rgba(0,0,0,0.6)",
+  "effects": ["glow", "gradient-text"],
+  "motion": {
+    "durationMs": 700,
+    "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+    "entrance": "blur-in",
+    "stagger": 0.12
+  },
+  "mermaid": {
+    "look": "neo",
+    "themeVariables": {}
+  },
+  "signature": ["Near-black canvas with indigo radial glow", "White-to-grey gradient headline text", "Translucent 8% white borders", "Blur-in entrance motion"],
+  "avoid": ["Pure white backgrounds", "Hard shadows", "Bright saturated fills"]
+}
