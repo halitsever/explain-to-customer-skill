@@ -11,6 +11,7 @@ An agent skill for Claude Code that turns a code change into a short video, slid
 <br/>
 <br/>
 <img src="https://img.shields.io/github/sponsors/halitsever"/>
+<a href="https://skills.sh/halitsever/explain-to-customer"><img src="https://skills.sh/b/halitsever/explain-to-customer" alt="skills.sh"/></a>
 </p>
 <p align="center">
 <a align="center" href="https://halitsever.github.io/explain-to-customer/">Website and docs</a>
