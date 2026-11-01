@@ -1,0 +1,86 @@
+/* Docs pages wear the product's own colours and type, so they read as part of the site rather than a stock theme. */
+:root {
+  --etc-ink: #1f1d1a;
+  --etc-ink-2: #181613;
+  --etc-paper: #fbf9f5;
+  --etc-ember: #e9744a;
+  --etc-ember-deep: #c4562e;
+  --etc-ember-text: #a8462a;
+  --etc-stone: #b5ada2;
+  --etc-stone-deep: #5e5850;
+
+  --vp-font-family-base: "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --vp-font-family-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --vp-c-bg: var(--etc-paper);
+  --vp-c-bg-alt: #f3efe8;
+  --vp-c-bg-soft: #efeae2;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-text-1: var(--etc-ink);
+  --vp-c-text-2: var(--etc-stone-deep);
+  --vp-c-text-3: #7a7369;
+  --vp-c-divider: #e4ddd2;
+  --vp-c-gutter: #e9e3d9;
+  --vp-c-border: #ddd5c9;
+
+  --vp-c-brand-1: var(--etc-ember-text);
+  --vp-c-brand-2: var(--etc-ember-deep);
+  --vp-c-brand-3: var(--etc-ember-deep);
+  --vp-c-brand-soft: rgba(233, 116, 74, 0.14);
+
+  --vp-button-brand-bg: var(--etc-ember-deep);
+  --vp-button-brand-hover-bg: #b04c27;
+  --vp-button-brand-active-bg: #9c4223;
+  --vp-button-brand-text: #fffaf5;
+
+  --vp-code-color: #8f3b22;
+  --vp-code-bg: rgba(233, 116, 74, 0.1);
+  --vp-home-hero-name-color: var(--etc-ink);
+}
+
+.dark {
+  --vp-c-bg: var(--etc-ink);
+  --vp-c-bg-alt: var(--etc-ink-2);
+  --vp-c-bg-soft: #2a2723;
+  --vp-c-bg-elv: #26231f;
+  --vp-c-text-1: #f3efe8;
+  --vp-c-text-2: var(--etc-stone);
+  --vp-c-text-3: #8c857b;
+  --vp-c-divider: #34302b;
+  --vp-c-gutter: #141210;
+  --vp-c-border: #3d3832;
+
+  --vp-c-brand-1: #f08a63;
+  --vp-c-brand-2: var(--etc-ember);
+  --vp-c-brand-3: var(--etc-ember-deep);
+  --vp-c-brand-soft: rgba(233, 116, 74, 0.16);
+
+  --vp-code-color: #f4a585;
+  --vp-code-bg: rgba(233, 116, 74, 0.12);
+  --vp-code-block-bg: #191714;
+}
+
+.VPNavBarTitle .title {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  gap: 10px;
+}
+
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3 {
+  letter-spacing: -0.025em;
+}
+
+.vp-doc h1 {
+  font-weight: 800;
+}
+
+.vp-doc img {
+  border-radius: 12px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--etc-ember);
+  outline-offset: 2px;
+}

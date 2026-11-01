@@ -1,7 +1,7 @@
 <p align="center" class="logo-section">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/brand/logo-mark-dark.svg">
-  <img src="docs/brand/logo-mark.svg" height="80" width="80" alt="explain-to-customer logo"/>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/public/brand/logo-mark-dark.svg">
+  <img src="docs/public/brand/logo-mark.svg" height="80" width="80" alt="explain-to-customer logo"/>
 </picture>
 <br/>
 <img src="https://halitsever-api.vercel.app/api/repo-title?title=Explain%20To%20Customer" alt="Explain To Customer">
@@ -13,12 +13,12 @@ A Claude Code skill that turns a code change into a short video, slides and diag
 <img src="https://img.shields.io/github/sponsors/halitsever"/>
 </p>
 <p align="center">
-<a align="center" href="#usage">Documentation</a>
+<a align="center" href="https://halitsever.github.io/explain-to-customer/">Website and docs</a>
   </p>
 </p>
 
 <p align="center">
-<img src="docs/demo.gif" width="720" alt="A 43-second explainer video rendered by the skill"/>
+<img src="docs/public/demo.gif" width="720" alt="A 43-second explainer video rendered by the skill"/>
 </p>
 
 <p align="center">
@@ -36,7 +36,7 @@ The skill reads the diff and the code around it, quotes the product's real UI st
 
 | shadcn | Whiteboard | Linear |
 |---|---|---|
-| <img src="docs/examples/summary-shadcn.png" width="300" alt="Summary card in the shadcn style"/> | <img src="docs/examples/summary-whiteboard.png" width="300" alt="Summary card in the whiteboard style"/> | <img src="docs/examples/callouts-linear.png" width="300" alt="Annotated screenshot in the linear style"/> |
+| <img src="docs/public/examples/summary-shadcn.png" width="300" alt="Summary card in the shadcn style"/> | <img src="docs/public/examples/summary-whiteboard.png" width="300" alt="Summary card in the whiteboard style"/> | <img src="docs/public/examples/callouts-linear.png" width="300" alt="Annotated screenshot in the linear style"/> |
 
 The same change in three styles: switching style re-renders the existing storyboard, no rewrite needed.
 
@@ -143,7 +143,7 @@ Tweaks after delivery are cheap: ask for a shorter cut, another language or anot
 
 ### Development
 
-The skill lives in `skills/explain-to-customer/`: `SKILL.md` is the entry point, long guidance is in `reference/`, styles in `styles/`, scene templates in `templates/scenes/` and the Node scripts in `scripts/`. `docs/` holds the README images and the logo.
+The skill lives in `skills/explain-to-customer/`: `SKILL.md` is the entry point, long guidance is in `reference/`, styles in `styles/`, scene templates in `templates/scenes/` and the Node scripts in `scripts/`. `docs/` is the [website](https://halitsever.github.io/explain-to-customer/), built with VitePress (`npm run docs:dev`); its `public/` folder also holds the README images and the logo.
 
 ```bash
 cd skills/explain-to-customer

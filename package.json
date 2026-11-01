@@ -1,0 +1,16 @@
+{
+  "name": "explain-to-customer-docs",
+  "private": true,
+  "type": "module",
+  "description": "Website and docs for the explain-to-customer Claude Code skill.",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "@fontsource-variable/plus-jakarta-sans": "5.3.0",
+    "@fontsource/jetbrains-mono": "5.3.0",
+    "vitepress": "1.6.4"
+  }
+}
