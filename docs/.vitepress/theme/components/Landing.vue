@@ -41,8 +41,8 @@ const steps = [
         <div class="hero__copy">
           <h1 id="hero-title">Your client doesn’t read diffs.</h1>
           <p class="hero__lead">
-            explain-to-customer is a Claude Code skill that turns your change into a short video, a few slides, a diagram and a message they will actually read. One command,
-            rendered on your machine.
+            explain-to-customer is an agent skill for Claude Code that turns your change into a short video, a few slides, a diagram and a message they will actually read. One
+            command, rendered on your machine.
           </p>
           <div class="hero__cta">
             <CopyCommand :command="INSTALL_SHORT" />

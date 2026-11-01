@@ -2,7 +2,7 @@
   "name": "explain-to-customer-docs",
   "private": true,
   "type": "module",
-  "description": "Website and docs for the explain-to-customer Claude Code skill.",
+  "description": "Website and docs for explain-to-customer, an agent skill for Claude Code.",
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",

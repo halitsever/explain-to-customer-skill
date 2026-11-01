@@ -7,7 +7,7 @@
 <img src="https://halitsever-api.vercel.app/api/repo-title?title=Explain%20To%20Customer" alt="Explain To Customer">
 
 <p align="center">
-A Claude Code skill that turns a code change into a short video, slides and diagrams you can send to a client.<br>
+An agent skill for Claude Code that turns a code change into a short video, slides and diagrams you can send to a client.<br>
 <br/>
 <br/>
 <img src="https://img.shields.io/github/sponsors/halitsever"/>

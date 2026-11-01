@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 const base = "/explain-to-customer/";
 const site = "https://halitsever.github.io/explain-to-customer/";
-const description = "A Claude Code skill that turns a code change into a short video, slides and diagrams your client understands.";
+const description = "An agent skill for Claude Code that turns a code change into a short video, slides and diagrams your client understands.";
 
 export default defineConfig({
   base,
