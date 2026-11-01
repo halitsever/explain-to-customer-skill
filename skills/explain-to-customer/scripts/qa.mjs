@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * QA for one run: ffprobe checks, frame extraction, blank-frame detection, on-screen text lint (privacy, jargon,
- * pacing, placeholders), contrast table, and a glyph card per font. Writes _source/qa/report.json.
+ * QA for one run: ffprobe checks, frame extraction, blank-frame detection, text lint of the storyboard, message and
+ * diagram labels (privacy, jargon, pacing, placeholders), contrast table, and a glyph card per font. Writes _source/qa/report.json.
  *   qa.mjs --src <folder>/_source
  * Then Read every file listed under "review".
  */
@@ -10,6 +10,7 @@ import path from "node:path";
 import { parseArgs, loadRun, readJson, writeJson, exists, die, fmtBytes, runSync, findFfmpeg, launchChromium } from "./lib/common.mjs";
 import { timeline, sceneFileName } from "./lib/scenes.mjs";
 import { serveDir } from "./lib/static-server.mjs";
+import { diagramLabels } from "./lib/diagram-text.mjs";
 
 const args = parseArgs();
 const errors = [];
@@ -90,6 +91,22 @@ function lintStoryboard(sb) {
     if (video.length < 4 || video.length > 7) warn("storyboard", `${video.length} video scenes; target 4 to 7`);
   }
   for (const [k, v] of Object.entries(sb.brief || {})) for (const t of [].concat(v)) lintText(`brief.${k}`, t, { onScreen: false, technical });
+}
+
+const errorKind = (e) => e.msg.replace(/ on (screen|page)/, "").split(":")[0];
+
+/** Labels get the full on-screen lint. Each whole line, comments included, is also scanned for secrets in case the extractor missed its syntax. */
+function lintDiagram(name, source, technical) {
+  const labels = diagramLabels(source);
+  source.split(/\r?\n/).forEach((line, i) => {
+    const where = `${name}:${i + 1}`;
+    const start = errors.length;
+    for (const l of labels) if (l.line === i + 1) lintText(where, l.text, { onScreen: true, technical });
+    const seen = new Set(errors.slice(start).map(errorKind));
+    const mark = errors.length;
+    lintText(where, line, { onScreen: false, technical: true });
+    errors.push(...errors.splice(mark).filter((e) => !seen.has(errorKind(e))));
+  });
 }
 
 function probe(file) {
@@ -218,6 +235,16 @@ async function main() {
     if (/\{\{|TODO|TBD/.test(msg)) err(run.layout.message, "template placeholder left in message");
     if (msg.includes("<!--")) err(run.layout.message, "template comment left in message");
   } else warn("message", `${run.layout.message} not written yet`);
+
+  const diagDir = path.join(src, "diagrams");
+  const mmd = exists(diagDir)
+    ? fs
+        .readdirSync(diagDir)
+        .filter((f) => f.endsWith(".mmd"))
+        .sort()
+    : [];
+  for (const f of mmd) lintDiagram(`diagrams/${f}`, fs.readFileSync(path.join(diagDir, f), "utf8"), sb?.meta?.audience === "technical");
+  report.checks.diagramSources = mmd;
 
   for (const c of tokens.contrast || []) {
     const min = /accent/.test(c.pair) ? 3 : 4.5;

@@ -7,7 +7,9 @@
 - real customer data and the names of your other clients
 - file names, function names and commit hashes, unless you ask for `audience=technical`
 
-Screenshots use demo data. Emails, phone numbers, card numbers, tokens and password fields are covered automatically, and you can mask more by selector. The QA script scans every on-screen string and the message for the obvious patterns; Claude checks the rest by looking at each frame.
+Screenshots use demo data. Emails, phone numbers, card numbers, tokens and password fields are covered automatically, and you can mask more by selector.
+
+Before anything is handed over, the QA script scans the captions, slide copy, every diagram label and the message for API keys, tokens, JWTs, private keys, credential assignments, real email addresses and internal hosts. Diagram sources are scanned line by line, comments included, so a label in unusual Mermaid syntax is still checked. Claude then looks at every extracted frame. A secret drawn inside an image or canvas in your own app is caught by that visual check alone, so keep demo data in the app you capture.
 
 ## What is never invented
 

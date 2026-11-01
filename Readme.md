@@ -138,6 +138,7 @@ Tweaks after delivery are cheap: ask for a shorter cut, another language or anot
 ### Privacy and honesty
 
 - Secrets, internal URLs, stack traces and real customer data never go on screen; screenshots use demo data and mask emails, phone numbers, tokens and password fields.
+- Before delivery, QA scans captions, slide copy, diagram labels and the message for keys, tokens, real emails and internal hosts, then Claude looks at every frame.
 - Nothing is invented: no made-up features, numbers or dates, and visuals that are not real screenshots stay clearly illustrative.
 - Rendering is local. No cloud rendering, publishing or telemetry.
 
@@ -147,7 +148,7 @@ The skill lives in `skills/explain-to-customer/`: `SKILL.md` is the entry point,
 
 ```bash
 cd skills/explain-to-customer
-node --test scripts/test/paths.test.mjs   # save-path resolution on macOS, Windows, Linux and WSL
+node --test scripts/test/*.test.mjs       # save paths per OS, Mermaid label extraction
 node scripts/theme.mjs --validate         # every style against styles/_schema.json
 node scripts/styles-preview.mjs           # regenerate styles-preview.png
 npx prettier --write "scripts/**/*.mjs" "templates/scenes/*.{js,css}" "styles/*.json"

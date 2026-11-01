@@ -50,4 +50,6 @@ Add a `diagram` scene with `assets: ["diagrams/<name>.scene.png"]` and render di
 
 ## Deliver
 
+qa.mjs lints every `.mmd` line, comments included, with the on-screen rules; an error at `diagrams/<name>.mmd:<line>` is fixed in that file, then re-render the diagram.
+
 The customer gets the SVG and PNG. The editable `.mmd` sources stay in `SRC/diagrams/`; mention them when the user might want to edit a diagram later; any Mermaid editor opens them.
