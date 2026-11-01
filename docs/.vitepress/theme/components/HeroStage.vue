@@ -6,10 +6,11 @@ const video = ref<HTMLVideoElement | null>(null);
 const rendered = ref(false);
 const reduced = ref(false);
 const playing = ref(false);
+const mounted = ref(false);
 let timer: ReturnType<typeof setTimeout> | undefined;
 let observer: IntersectionObserver | undefined;
 
-// The terminal finishes typing at about 3 s; the render "completes" right after.
+// The terminal finishes typing at about 3 s; the glow behind the player follows.
 const RENDER_DONE_MS = 3200;
 
 async function play() {
@@ -34,19 +35,18 @@ function toggle() {
 }
 
 onMounted(() => {
+  mounted.value = true;
   reduced.value = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (reduced.value) {
     rendered.value = true;
     return;
   }
-  timer = setTimeout(() => {
-    rendered.value = true;
-    play();
-  }, RENDER_DONE_MS);
+  play();
+  timer = setTimeout(() => (rendered.value = true), RENDER_DONE_MS);
   // Pause the loop while the hero is off screen.
   observer = new IntersectionObserver(([entry]) => {
     const v = video.value;
-    if (!v || !rendered.value) return;
+    if (!v) return;
     if (entry.isIntersecting && playing.value) v.play().catch(() => {});
     else if (!entry.isIntersecting) v.pause();
   });
@@ -91,8 +91,7 @@ onBeforeUnmount(() => {
           aria-label="A 43-second explainer video the skill rendered for a sign-up form change"
           @click="toggle"
         ></video>
-        <span class="player__wait" aria-hidden="true">Rendering for your client</span>
-        <button v-if="rendered && !playing" type="button" class="player__play" @click="play">Play the demo</button>
+        <button v-if="mounted && !playing" type="button" class="player__play" @click="play">Play the demo</button>
       </div>
       <figcaption>clearer-error-messages-on-sign-up.mp4, rendered from that diff</figcaption>
     </figure>
@@ -249,29 +248,6 @@ onBeforeUnmount(() => {
   height: 100%;
   object-fit: cover;
   cursor: pointer;
-  filter: grayscale(1) brightness(0.32);
-  transform: scale(0.985);
-  transition:
-    filter 0.9s ease,
-    transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-.is-rendered .player__frame video {
-  filter: none;
-  transform: none;
-}
-.player__wait {
-  position: absolute;
-  inset: auto 0 0 0;
-  padding: 16px 20px;
-  font:
-    600 15px/1.2 "Plus Jakarta Sans Variable",
-    system-ui,
-    sans-serif;
-  color: #f3efe8;
-  transition: opacity 0.4s;
-}
-.is-rendered .player__wait {
-  opacity: 0;
 }
 .player__play {
   position: absolute;
@@ -321,7 +297,6 @@ onBeforeUnmount(() => {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .player__frame video,
   .player::before {
     transition: none;
   }
